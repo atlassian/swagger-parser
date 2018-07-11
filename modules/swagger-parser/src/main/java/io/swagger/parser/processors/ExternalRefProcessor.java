@@ -121,7 +121,7 @@ public final class ExternalRefProcessor {
 
             if (model instanceof  ModelImpl) {
                 ModelImpl modelImpl = (ModelImpl) model;
-                Property additionalProperties = modelImpl.getAdditionalProperties();
+                Object additionalProperties = modelImpl.getAdditionalProperties();
                 if (additionalProperties != null) {
                     if (additionalProperties instanceof RefProperty) {
                         processRefProperty(((RefProperty) additionalProperties), file);
