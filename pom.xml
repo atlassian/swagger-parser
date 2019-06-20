@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>5</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.swagger</groupId>
     <artifactId>swagger-parser-project</artifactId>
-    <version>1.0.37-SNAPSHOT</version>
+    <version>1.0.37-atlassian-1</version>
     <packaging>pom</packaging>
     <name>swagger-parser-project</name>
     <developers>
@@ -31,7 +26,7 @@
     </developers>
     <issueManagement>
         <system>github</system>
-        <url>https://github.com/swagger-api/swagger-parser/issues</url>
+        <url>https://github.com/atlassian/swagger-parser/issues</url>
     </issueManagement>
     <mailingLists>
         <mailingList>
@@ -234,6 +229,16 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <distributionManagement>
+        <repository>
+            <id>atlassian-3rdparty</id>
+            <url>https://packages.atlassian.com/maven/3rdparty</url>
+        </repository>
+        <snapshotRepository>
+            <id>atlassian-3rdparty-snapshot</id>
+            <url>https://packages.atlassian.com/maven/3rdparty-snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
     <modules>
         <module>modules/swagger-parser</module>
         <module>modules/swagger-compat-spec-parser</module>
@@ -241,7 +246,7 @@
     <properties>
         <commons-io-version>2.4</commons-io-version>
         <slf4j-version>1.6.3</slf4j-version>
-        <swagger-core-version>1.5.20</swagger-core-version>
+        <swagger-core-version>1.5.21-atlassian-1</swagger-core-version>
         <junit-version>4.8.1</junit-version>
         <testng-version>6.9.6</testng-version>
         <jmockit-version>1.19</jmockit-version>

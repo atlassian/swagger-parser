@@ -40,9 +40,10 @@ public class PropertyProcessor  {
     }
 
     private void processMapProperty(MapProperty property) {
-        final Property additionalProperties = property.getAdditionalProperties();
-        if (additionalProperties != null) {
-            processProperty(additionalProperties);
+        final Object additionalProperties = property.getAdditionalProperties();
+        if (additionalProperties != null
+                && additionalProperties instanceof Property) {
+            processProperty((Property)additionalProperties);
         }
     }
 

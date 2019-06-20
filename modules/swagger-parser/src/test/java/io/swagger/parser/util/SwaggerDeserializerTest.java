@@ -1554,8 +1554,7 @@ public class SwaggerDeserializerTest {
 
         Property response = swagger.getPath("/store/inventory").getGet().getResponses().get("200").getSchema();
         assertTrue(response instanceof MapProperty);
-        Property additionalProperties = ((MapProperty) response).getAdditionalProperties();
-        assertTrue(additionalProperties instanceof UntypedProperty);
-        assertEquals(additionalProperties.getType(), null);
+        Object additionalProperties = ((MapProperty) response).getAdditionalProperties();
+        assertNotNull(additionalProperties);
     }
 }
